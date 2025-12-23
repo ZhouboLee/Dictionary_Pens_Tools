@@ -160,7 +160,7 @@ A: 后台服务类应用（如悬浮辅助、microG）可能增加耗电，不�
 5. 开启Pull Request
 
 ### 贡献者
-<a href="https://github.com/yourusername/yourrepo/graphs/contributors">
+<a href="https://github.com/Zhoubolee/dictionary_pens_tools/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=ZhouboLee/Dictionary_Pens_Tools" />
 </a>
 
