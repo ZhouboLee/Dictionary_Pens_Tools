@@ -1,190 +1,237 @@
-# Android Dictionary Pens Tools 🛠️
+📱 Dictionary Pens Tools - 安卓词典笔实用工具集合
+
+专为Android词典笔优化的实用工具和应用仓库
 
 > [!NOTE]
 > This README document is only available in Chinese (Simplified).
 > 
 > 此README文件僅提供中文（簡體）版本。
 
-为Android词典笔爱好者打造的系统增强与应用集合，解锁设备的完整潜力！  
-当然，也可以不止词典笔。
+# ✨ 项目简介
 
-[![Platform](https://img.shields.io/badge/Android-1.6%2B-green.svg)]()
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/ZhouboLee/Dictionary_Pens_Tools/pulls)
+本仓库收集和整理了适用于Android词典笔的各种实用工具、轻量级应用和系统增强组件。所有应用都经过筛选，确保在词典笔的低配置环境下能够流畅运行。
 
-## 📋 项目简介
+# 🗂️ 目录结构
 
-本仓库收集了一系列经过测试的Android应用与工具，专门针对词典笔这类特殊设备进行优化。无论是想提升系统流畅度、增强功能，还是增加娱乐性，这里都能找到合适的解决方案。
-
-> [!WARNING]
-> 使用前请确保了解刷机/安装第三方应用的风险，并自行备份重要数据。作者不对任何设备损坏负责。
-
-## 🚀 快速开始
-
-### 前置要求
-- 已开启USB调试的Android词典笔
-- 电脑上安装[ADB工具](https://developer.android.google.cn/tools/releases/platform-tools?hl=zh-cn)
-- 基础命令行操作知识
-
-### 安装步骤
-1. 在词典笔的设置中开启「开发者选项」和「USB调试」
-2. 通过USB连接电脑
-3. 下载所需APK文件到电脑
-4. 执行安装命令：
-```bash
-adb install -r app_name.apk
+```
+Dictionary_Pens_Tools/
+├── app_store/                   应用商店
+├── browsers/                    浏览器应用
+├── camera/                      相机应用
+├── filemgr/                     文件管理器
+├── input-personalization/       输入法个性化
+├── launchers/                   启动器应用
+├── microg/                      Google服务替代方案
+├── terminal/                    终端工具
+├── tools/                       实用工具
+├── amuse/                       娱乐应用
+├── LICENSE                      许可证（本仓库）
+└── README.md                    说明文件
 ```
 
-## 📦 应用分类
+# 📦 应用分类
 
-### 🏠 系统与启动器
-| 应用 | 最低Android版本 | 主要功能 | 适用设备 |
-|------|----------------|----------|----------|
-| **悬浮辅助** | 5.0+ | 补充手势导航、悬浮球功能 | 全系 |
-| **Lawnchair** | 8.0+ | 轻量级现代启动器 | 高性能设备 |
-| **Emerald Launcher** | 1.6+ | 极简启动器 | 低性能/旧系统 |
-| **MI Control Center** | 7.0+ | 替换控制中心与通知栏 | 全系 |
-| **Shizuku** | 6.0+ | 获取系统API权限 | 需要Root/ADB |
+## 🔧 核心工具类
 
-### 🎵 影音娱乐
-| 应用 | 架构 | 特点 | 推荐场景 |
-|------|------|------|----------|
-| **Bilibili车机版** | 通用 | 界面简洁，资源占用低 | 视频学习/娱乐 |
-| **网易云音乐手表版** | 通用 | 极致轻量，基础功能 | 低性能设备听歌 |
-| **网易云音乐极速版** | 通用 | 平衡功能与性能 | 中等性能设备 |
-| **Open Camera** | 通用 | 开源相机应用 | 带摄像头的设备 |
-| **Google Gallery** | 通用 | 简洁快速的图片浏览 | 图片管理 |
+### 文件管理器
+- MT管理器 (v2.26.1) - 强大的Root文件管理工具
+- Material Files - 开源、Material Design风格
+- Google文件极客 - Google开发的文件管理应用
 
-### 🛠️ 工具与实用
-| 应用 | 类别 | 亮点 | 备注 |
-|------|------|------|------|
-| **Files By Google** | 文件管理 | 简洁智能，自动清理 | 替代系统文件管理器 |
-| **MT管理器** | 高级工具 | 双窗口、Root探索、APK编辑 | 极客必备 |
-| **Via浏览器** | 浏览器 | 仅1MB，插件支持 | 日常浏览 |
-| **Chrome** | 浏览器 | 完整功能，同步支持 | 需要现代Web体验 |
-| **Termux** | 终端 | Linux环境，包管理器 | 开发/学习Linux |
+### 安装工具
+- InstallerX Revived (v2.3.1) - 支持分卷APK和Shizuku/root授权安装
 
-### 🌐 网络与服务
-| 应用 | 用途 | 依赖 | 注意 |
-|------|------|------|------|
-| **Clash Meta For Android** | 网络代理 | 配置文件 | 需合法使用 |
-| **microG** | Google服务替代 | 无 | 不完全兼容所有应用 |
-| **Aurora Store** | 应用商店 | 网络 | 匿名下载Google Play应用 |
+## 🚀 系统增强类
 
-### ⌨️ 输入与个性化
-| 应用 | 功能 | 替代方案 |
-|------|------|----------|
-| **讯飞输入法** | 中文输入 | 系统输入法 |
-| **Lawnicons** | 图标包 | 配合Lawnchair使用 |
-| **几何天气** | 天气信息 | 开源美观 |
+### 启动器应用
+- Lawnchair (14.0.0 Beta.3) - 类Pixel启动器体验
+- Emerald启动器 - 轻量级、快速
+- Lawnicons图标包 - 配套图标资源
 
-## 🔧 进阶配置
+### Google服务替代
+- MicroG套件 - 开源Google服务替代方案
+- GsfProxy - Google服务框架代理
+- Aurora Store - 开源应用商店
 
-### Lawnchair + Lawnicons 美化组合
-1. 先安装Lawnchair并设置为默认启动器
-2. 安装Lawnicons图标包
-3. 在Lawnchair设置中应用图标包
-4. 调整桌面网格、图标大小等参数
+## 📱 日常应用类
 
-### Shizuku 授权使用
-```bash
-# 通过ADB激活Shizuku
-adb shell sh /sdcard/Android/data/moe.shizuku.privileged.api/files/start.sh
-```
+### 浏览器
+- Via浏览器 - 轻量级、极速浏览
+- Chrome浏览器 - Google网页浏览器
 
-### Termux 基础设置
-```bash
-# 更新包管理器
-pkg update && pkg upgrade
-# 安装常用工具
-pkg install python nodejs git vim
-```
+### 输入法
+- Google输入法（Gboard） - 官方键盘
+- 讯飞输入法 - 中文输入优化
+- 悬浮辅助工具 - 替代和补充导航栏
 
-> [!WARNING]
-> ## 兼容性说明
->
-> | 应用 | 已知问题 | 解决方案 |
-> |------|----------|----------|
-> | MI Control Center | 有无法触发的情况 | 使用桌面快捷方式或悬浮辅助固定快捷方式 |
-> | microG | 部分应用仍需要GSF | 配合FakeGApps使用或使用不需要Google专有库或支持microG这类FOSS的软件 |
-> | Lawnchair | 快捷栏文件夹会导致崩溃，且在Lawnchair 15 Beta 2仍未修复 | 不使用快捷栏文件夹 |
-> | 悬浮辅助 | 在某些裁切屏设备无法正常显示 | 在悬浮辅助设置关闭自动贴边并手动调整悬浮球XY位置 |
+### 终端工具
+- Termux - Android终端模拟器
 
-## 🤔 常见问题
+## 🎵 娱乐休闲类
 
-**Q: 安装后应用无法打开或闪退？**  
-A: 检查Android版本（[Android SDK API级别](https://developer.android.google.cn/tools/releases/platforms?hl=zh-cn)）和CPU架构（ABI）是否匹配，尝试安装旧版本。
+### 音乐应用
+- 网易云音乐手表版 (v3.0.32) - 新版，提供更新的功能支持
+- 网易云音乐手表版 (v2.9.36) - 旧版，如遇兼容性问题请考虑使用
 
-**Q: 如何恢复原厂系统？**  
-A: 大部分应用可正常卸载或通过恢复出厂设置，如果是系统级修改，那只能靠您自己了。
+### 视频应用
+- 哔哩哔哩车机版 (v2.7.0) - 横屏优化、界面简化
 
-**Q: 词典笔没有USB调试选项？**  
-A: 连续点击「关于设备」中的版本号7次开启开发者选项，如果开发者选项被禁用，，您可以到工厂测试软件寻找adb开关，如果没有则说明厂商没有开放adb权限。
+### 相机应用
+- OpenCamera - 开源相机应用
 
-**Q: 这些应用耗电吗？**  
-A: 后台服务类应用（如悬浮辅助、microG）可能增加耗电，不需要时可关闭。
+## 🔧 其他工具类
 
-## 📁 文件结构
-```
-.
-├── README.md
-├── launchers/          # 启动器相关
-│   ├── lawnchair/
-│   ├── emerald/
-│   └── lawnicons/
-├── media/              # 影音应用
-│   ├── bilibili/
-│   ├── netease-music/
-│   └── camera-gallery/
-├── tools/              # 实用工具
-│   ├── file-managers/
-│   ├── browsers/
-│   └── termux/
-├── system/             # 系统增强
-│   ├── microg/
-│   ├── shizuku/
-│   └── control-center/
-└── input-personalization/ # 输入与个性化
-    ├── input-method/
-    ├── weather/
-    └── icons/
-```
+### 计算器
+- Google计算器 - 官方计算器应用
 
-## 🤝 贡献指南
+### VPN工具
+- Clash for Android (v2.11.7) - 网络代理工具
 
-欢迎提交Issue和Pull Request！
+### 天气应用
+- Geometric Weather (v3.013) - 开源天气应用
+
+# 🚀 快速开始
+
+## 推荐安装顺序
+
+1. 基础工具 - 先安装文件管理器和安装工具
+2. 系统增强 - 根据需要安装启动器和MicroG
+3. 日常应用 - 按个人需求选择安装
+
+## 安装方法
+
+1. 下载所需的APK文件到电脑或手机
+2. 通过USB连接词典笔，使用ADB命令安装：
+   ```bash
+   adb install filename.apk
+   ```
+3. 或者将APK文件复制到词典笔存储中直接安装
+4. 对于分卷APK（.apkm文件），使用InstallerX应用进行安装
+
+> [!IMPORTANT]
+> ### 重要提示
+> - 安装前建议备份重要数据
+> - 部分应用可能需要开启未知来源安装权限
+> - 词典笔型号不同，兼容性可能有所差异
+
+# 📝 使用建议
+
+## 性能优化指南
+
+- 选择轻量版本 - 优先使用车机版、手表版等精简应用
+- 控制后台应用 - 定期清理不需要的后台进程
+- 管理存储空间 - 定期清理缓存和不需要的文件
+- 监控内存使用 - 使用系统工具监控内存占用情况
+
+>[!NOTE]
+> ### 兼容性说明
+> - 系统要求 - 大部分应用需要Android 8.0及以上版本
+> - 处理器架构 - 主要支持armeabi-v7a架构
+> - 内存建议 - 推荐1GB RAM以上的词典笔使用
+> - 屏幕适配 - 应用已针对小屏幕设备优化
+
+# 🔧 高级使用
+
+### 自定义安装
+
+对于有经验的用户，可以：
+
+1. 使用Termux安装命令行工具
+2. 通过MicroG替代Google服务框架
+3. 自定义启动器布局和设置
+4. 使用VPN工具实现网络访问
+
+### 故障排除
+
+- 应用闪退：尝试安装兼容版本
+- 安装失败：检查存储空间和权限设置
+- 运行卡顿：关闭不必要的后台应用
+- 网络问题：检查网络连接和代理设置
+
+# 🤝 参与贡献
+
+欢迎为这个项目做出贡献！
+
+## 如何贡献：
+
+1. 提交新的实用工具推荐
+2. 更新现有应用到新版本
+3. 测试不同词典笔的兼容性
+4. 完善文档和使用教程
+5. 报告问题或建议改进
+
+## 贡献流程：
 
 1. Fork本仓库
-2. 创建功能分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 开启Pull Request
+2. 创建功能分支
+3. 提交更改
+4. 发起Pull Request
 
-### 贡献者
-<a href="https://github.com/Zhoubolee/dictionary_pens_tools/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=ZhouboLee/Dictionary_Pens_Tools" />
-</a>
+# ⚠️ 免责声明
 
-## 📄 许可证
+1. 本仓库所有APK文件均收集自官方或可信第三方渠道
+2. 使用前请自行验证文件安全性
+3. 安装和使用风险由用户自行承担
+4. 建议在安装前备份个人数据
+5. 本项目仅供学习和研究使用
 
-本项目采用MIT许可证 - 详见 [LICENSE](LICENSE) 文件。
+# 📄 许可证与版权声明
 
-## 🔗 相关资源
+## 1. 仓库结构许可
+本仓库的**目录结构、分类方法、文档说明、使用指南**等原创组织内容采用 **[MIT许可证](LICENSE)**。
 
-- [ADB官方文档](https://developer.android.com/studio/command-line/adb)
-- [XDA Developers论坛](https://forum.xda-developers.com/)
-- [F-Droid开源应用商店](https://f-droid.org/)
-- [Android版本分布](https://developer.android.com/about/dashboards)
+## 2. 第三方应用
+本仓库中收集的所有APK文件**版权归原开发者所有**，遵循各自的原始许可证：
+- 开源应用：遵循其开源许可证（如GPL、MIT、Apache等）
+- 闭源应用：遵循其最终用户许可协议（EULA）
 
-## 💬 反馈
+## 3. 免责声明
+- 📦 本仓库仅为**索引和收集**，方便用户查找
+- ⚖️ 不拥有任何APK文件的版权
+- 🔗 提供原始来源信息以供验证
+- 🗑️ 收到版权方请求后将立即移除相关文件
 
-如有问题或建议，可通过以下方式联系：
-- GitHub Issues: [提交问题](https://github.com/ZhouboLee/Dictionary_Pens_Tools/issues)
-- Email: zhoubolee@163.com
+## 4. 用户责任
+使用本仓库中的APK文件前，请：
+1. 确认符合原应用的许可证条款
+2. 评估设备兼容性和安全风险
+3. 备份重要数据
+4. 遵守当地法律法规
+
+# 🌟 特别感谢
+
+感谢所有开源项目的开发者，特别是：
+
+- MicroG团队提供的Google服务替代方案
+- Termux开发者提供的强大终端环境
+- 各个开源应用维护者的辛勤工作
+
+# 🔗 相关资源
+
+## 官方网站
+
+- MicroG官网：https://microg.org/
+- Termux官网：https://termuxdev/cn/
+- F-Droid开源应用商店：https://f-droid.org/
+
+## 技术社区
+
+- XDA Forums论坛
+- 酷安应用市场
+- GitHub开源社区
 
 ---
 
-**如果你觉得这个项目有帮助，请给个⭐️ Star支持！**
+# 📊 反馈渠道
 
-*最后更新：2025年12月*
+- 通过GitHub Issues提交问题
+- 参与讨论区交流使用经验
+- 分享你的改造案例
 
-> 提示：定期检查应用更新，获取更好的兼容性和安全性。
+---
+
+⭐ 如果这个项目对你有帮助，请给个Star支持！
+
+> [!IMPORTANT]
+> ### 💡 温馨提示
+> 请遵守当地法律法规，合理使用工具。改造设备可能影响保修，请谨慎操作。
